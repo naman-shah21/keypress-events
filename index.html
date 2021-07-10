@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Keyboard Keys</title>
+</head>
+
+<body style="text-align:center;">
+    <h1 style="font-size:50px">Keyboard Keys</h1>
+    <h2 id="keytype"></h2>
+</body>
+<style>
+    h2 {
+    border: ridge 50px;
+    font-size:75px;
+    text-align: center;
+    width: 80%;height:350px;
+    background-color:bisque;
+    padding-top: 260px;
+    margin:100px;
+    }
+</style>
+<script>
+    var Show = document.getElementById("keytype");
+   
+    window.addEventListener("keydown", key_press);
+
+    function key_press(e){
+        kp = e.keyCode;
+        if (kp>= 65 && kp<=90){
+            Show.innerHTML = "Alphabet Key";
+        }
+        if (kp>= 97 && kp<=122){
+            Show.innerHTML = "Alphabet Key";
+        }
+        if (kp>= 48 && kp<=57){
+            Show.innerHTML = "Number Key";
+        }
+        if (kp>= 37 && kp<=40){
+            Show.innerHTML = "Arrow Key";
+        }
+        if (kp == 27){
+            Show.innerHTML = "Esc Key";
+        }
+        if (kp == 18){
+            Show.innerHTML = "Alt Key";
+        }
+        if (kp == 17){
+            Show.innerHTML = "Ctrl Key";
+        }
+        if (kp == 13){
+            Show.innerHTML = "Enter Key";
+        }
+        if (kp == 16){
+            Show.innerHTML = "Shift Key";
+        }
+        if (kp == 46){
+            Show.innerHTML = "Delete Key";
+        }
+    }
+</script>
+</html>
